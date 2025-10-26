@@ -3,14 +3,16 @@ import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
 import KitchenRegistrationForm from "../organisms/KitchenRegistrationForm";
 
-function KitchenRegistrationPage({ onNavigateToLanding }) {
+// Añade { onOpenModal } aquí para recibir la prop
+function KitchenRegistrationPage({ onNavigateToLanding, onOpenModal }) {
   return (
     <>
       <Header />
       <main className="container section">
         <KitchenRegistrationForm onBack={onNavigateToLanding} />
       </main>
-      <Footer onOpenModal={onOpenModal} /> {/* Pasa la prop a Footer */}
+      {/* Ahora la variable onOpenModal sí existe y se puede pasar al Footer */}
+      <Footer onOpenModal={onOpenModal} />
     </>
   );
 }

@@ -18,7 +18,6 @@ function LandingPage({ onNavigateToRegistration, onOpenModal  }) { // Recibe la 
       <HowItWorks />
       <Roles />
       <Benefits />
-      {/* Pasa la prop a CTASection */}
       <CTASection onNavigateToRegistration={onNavigateToRegistration} /> 
       <Contact />
       <Footer onOpenModal={onOpenModal} /> {/* Pasa la prop a Footer */}
