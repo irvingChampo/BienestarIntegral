@@ -1,12 +1,19 @@
 import React from "react";
 import "../../styles/components.css";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
-
-function Footer() {
-  return (
-    <footer className="footer">
-      <div className="container footer-content">
-        <p>© 2025 Bienestar Integral. Todos los derechos reservados.</p>
+function Footer({ onOpenModal }) { // Recibe la prop
+return (
+<footer className="footer">
+<div className="container footer-content">
+<div className="footer-links-legal" style={{ marginBottom: '1rem' }}>
+<a href="#" onClick={(e) => { e.preventDefault(); onOpenModal('privacy'); }} className="legal-link">
+Política de Privacidad
+</a>
+<a href="#" onClick={(e) => { e.preventDefault(); onOpenModal('terms'); }} className="legal-link">
+Términos y Condiciones
+</a>
+</div>
+<p>© 2025 Bienestar Integral. Todos los derechos reservados.</p>
         <div className="footer-links">
           <a
             href="#"
@@ -33,9 +40,8 @@ function Footer() {
             <FaXTwitter className="social-icon" />
           </a>
         </div>
-      </div>
-    </footer>
-  );
+</div>
+</footer>
+);
 }
-
 export default Footer;

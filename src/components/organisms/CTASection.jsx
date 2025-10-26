@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/components.css";
 import Button from "../atoms/Button";
 
-function CTASection() {
+function CTASection({ onNavigateToRegistration }) { // Recibe la prop
   return (
     <section className="section cta">
       <div className="container cta-content">
@@ -12,12 +12,14 @@ function CTASection() {
           comunitaria para mejorar vidas.
         </p>
         <div className="cta-buttons">
-        <a href="#contact">
+          <a href="#contact">
             <Button text="Unirme como voluntario" />
-        </a>
-        <a href="#contact">
-            <Button text="Registrar mi cocina"/>
-        </a>
+          </a>
+          {/* Este botón ahora cambia la vista */}
+          <Button 
+            text="Registrar mi cocina" 
+            onClick={onNavigateToRegistration} 
+          />
         </div>
       </div>
     </section>

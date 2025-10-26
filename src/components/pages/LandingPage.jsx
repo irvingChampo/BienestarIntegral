@@ -9,7 +9,7 @@ import CTASection from "../organisms/CTASection";
 import Contact from "../organisms/Contact";
 import Footer from "../organisms/Footer";
 
-function LandingPage() {
+function LandingPage({ onNavigateToRegistration, onOpenModal  }) { // Recibe la prop
   return (
     <>
       <Header />
@@ -18,9 +18,10 @@ function LandingPage() {
       <HowItWorks />
       <Roles />
       <Benefits />
-      <CTASection />
+      {/* Pasa la prop a CTASection */}
+      <CTASection onNavigateToRegistration={onNavigateToRegistration} /> 
       <Contact />
-      <Footer />
+      <Footer onOpenModal={onOpenModal} /> {/* Pasa la prop a Footer */}
     </>
   );
 }
