@@ -15,7 +15,7 @@ function Contact() {
           className="contact-form"
           onSubmit={(e) => {
             e.preventDefault();
-            alert("Gracias por tu mensaje 😊 (simulación)");
+            alert("Gracias por tu mensaje (simulación)");
           }}
         >
           <input type="text" placeholder="Nombre completo" required />

@@ -35,7 +35,7 @@ function TermsContent() {
         </li>
         <li>
           <strong>Propiedad Intelectual:</strong> La plataforma, el código y la
-          marca son propiedad de la "Universidad Politécnica de Chiapas",
+          marca son propiedad de la "Bienestar Integral",
           protegidos por la Ley Federal del Derecho de Autor.
         </li>
         <li>
