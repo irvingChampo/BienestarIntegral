@@ -1,6 +1,8 @@
 import React from "react";
 import "../../styles/components.css";
 import Button from "../atoms/Button";
+// 1. Importa los iconos del formulario
+import { FaUser, FaEnvelope, FaCommentDots } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -15,12 +17,22 @@ function Contact() {
           className="contact-form"
           onSubmit={(e) => {
             e.preventDefault();
-            alert("Gracias por tu mensaje (simulación)");
+            alert("Gracias por tu mensaje  (simulación)");
           }}
         >
-          <input type="text" placeholder="Nombre completo" required />
-          <input type="email" placeholder="Correo electrónico" required />
-          <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+          {/* 2. Añade contenedores e iconos para cada campo */}
+          <div className="input-with-icon">
+            <FaUser className="input-icon" />
+            <input type="text" placeholder="Nombre completo" required />
+          </div>
+          <div className="input-with-icon">
+            <FaEnvelope className="input-icon" />
+            <input type="email" placeholder="Correo electrónico" required />
+          </div>
+          <div className="input-with-icon">
+            <FaCommentDots className="input-icon textarea-icon" />
+            <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+          </div>
           <Button text="Enviar mensaje" />
         </form>
       </div>

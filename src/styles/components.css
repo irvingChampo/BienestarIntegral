@@ -511,3 +511,101 @@
 .legal-link:hover {
   color: var(--color-bg);
 }
+
+/* ---------- ESTILOS VISUALES ADICIONALES ---------- */
+
+/* ----- ABOUT ----- */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  max-width: 1100px; /* Ancho mayor para el nuevo layout */
+}
+
+.about-text {
+  flex: 1 1 55%;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ----- HOW IT WORKS ----- */
+.how-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.how-card-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* ----- ROLES ----- */
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.role-card-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* ----- BENEFITS ----- */
+.feature-card-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* ----- CONTACT FORM ----- */
+.input-with-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  color: #aaa;
+}
+
+.input-icon.textarea-icon {
+  top: 1.2rem;
+  transform: none;
+}
+
+.input-with-icon input,
+.input-with-icon textarea {
+  padding-left: 3rem;
+  width: 100%; /* Asegura que el input ocupe todo el espacio */
+}
+
+
+/* ----- RESPONSIVE PARA NUEVOS ESTILOS ----- */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
